@@ -25,9 +25,8 @@ body {
   color: var(--ink);
   font-family: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", SimSun, serif;
   background:
-    radial-gradient(circle at 8% 10%, rgba(200, 117, 78, 0.17), transparent 28rem),
-    radial-gradient(circle at 88% 2%, rgba(111, 143, 121, 0.22), transparent 32rem),
-    linear-gradient(135deg, #fffaf1 0%, #f5eddc 48%, #eef4ed 100%);
+    linear-gradient(135deg, rgba(255, 250, 241, 0.9) 0%, rgba(245, 237, 220, 0.82) 48%, rgba(238, 244, 237, 0.88) 100%),
+    url("/assets/hero-research.png") center top / cover fixed;
   line-height: 1.7;
 }
 
@@ -164,7 +163,7 @@ h3 {
   aspect-ratio: 2 / 1;
   margin: 0;
   border-radius: 42px;
-  transform: rotate(1.2deg);
+  transform: none;
 }
 
 .hero__visual::after,
