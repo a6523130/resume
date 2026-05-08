@@ -1,15 +1,18 @@
 :root {
-  --ink: #1d2a25;
-  --muted: #66736d;
-  --paper: #fffaf1;
+  --ink: #142421;
+  --muted: #64766f;
+  --paper: #f7fbf8;
   --panel: rgba(255, 255, 255, 0.78);
   --panel-strong: #ffffff;
-  --line: rgba(42, 63, 55, 0.14);
-  --sage: #6f8f79;
-  --sage-deep: #2f5b48;
-  --clay: #c8754e;
-  --sand: #f2dfbd;
-  --shadow: 0 24px 70px rgba(47, 91, 72, 0.16);
+  --line: rgba(30, 88, 82, 0.14);
+  --primary: #1f6f65;
+  --primary-deep: #174d48;
+  --primary-soft: #dcefeb;
+  --aqua: #7fc7bd;
+  --gold: #d9a441;
+  --coral: #c96f52;
+  --mist: #edf7f4;
+  --shadow: 0 24px 70px rgba(22, 68, 63, 0.13);
 }
 
 * {
@@ -25,9 +28,9 @@ body {
   color: var(--ink);
   font-family: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", SimSun, serif;
   background:
-    radial-gradient(circle at 8% 10%, rgba(200, 117, 78, 0.17), transparent 28rem),
-    radial-gradient(circle at 88% 2%, rgba(111, 143, 121, 0.22), transparent 32rem),
-    linear-gradient(135deg, #fffaf1 0%, #f5eddc 48%, #eef4ed 100%);
+    linear-gradient(120deg, rgba(230, 247, 242, 0.82) 0%, rgba(255, 255, 255, 0) 34%),
+    linear-gradient(210deg, rgba(216, 236, 244, 0.64) 0%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(180deg, #fbfdfb 0%, var(--paper) 48%, #eef7f4 100%);
   line-height: 1.7;
 }
 
@@ -38,10 +41,10 @@ body::before {
   pointer-events: none;
   content: "";
   background-image:
-    linear-gradient(rgba(47, 91, 72, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(47, 91, 72, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(31, 111, 101, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 111, 101, 0.038) 1px, transparent 1px);
   background-size: 48px 48px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 80%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 78%);
 }
 
 a {
@@ -66,16 +69,17 @@ a {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.48);
-  color: var(--sage-deep);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--primary-deep);
   font-size: 14px;
-  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  transition: color 180ms ease, transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
 .topbar a:hover {
   transform: translateY(-2px);
   background: #ffffff;
-  box-shadow: 0 10px 26px rgba(47, 91, 72, 0.12);
+  color: var(--primary);
+  box-shadow: 0 10px 26px rgba(22, 68, 63, 0.12);
 }
 
 .hero__content,
@@ -92,7 +96,7 @@ a {
 
 .eyebrow {
   margin: 0 0 12px;
-  color: var(--clay);
+  color: var(--coral);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -135,14 +139,14 @@ h3 {
 
 .hero__role {
   margin-bottom: 22px;
-  color: var(--sage-deep);
+  color: var(--primary);
   font-size: clamp(20px, 3vw, 32px);
   font-weight: 700;
 }
 
 .hero__summary {
   max-width: 760px;
-  color: #3d4c46;
+  color: #35514c;
   font-size: clamp(17px, 2vw, 22px);
 }
 
@@ -174,8 +178,8 @@ h3 {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(135deg, rgba(255, 250, 241, 0.58), transparent 34%),
-    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.5), transparent 14rem);
+    linear-gradient(135deg, rgba(251, 253, 251, 0.34), transparent 36%),
+    linear-gradient(215deg, rgba(31, 111, 101, 0.12), transparent 46%);
 }
 
 .hero__visual img,
@@ -221,7 +225,7 @@ h3 {
   display: inline-flex;
   border-radius: 999px;
   padding: 6px 12px;
-  background: var(--sage-deep);
+  background: linear-gradient(135deg, var(--primary-deep), var(--primary));
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -234,11 +238,11 @@ h3 {
 }
 
 .tags span {
-  border: 1px solid rgba(47, 91, 72, 0.2);
+  border: 1px solid rgba(31, 111, 101, 0.18);
   border-radius: 999px;
   padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.55);
-  color: var(--sage-deep);
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--primary-deep);
   font-weight: 700;
 }
 
@@ -258,8 +262,8 @@ h3 {
   border-radius: 44px;
   padding: clamp(42px, 7vw, 76px);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(242, 223, 189, 0.5)),
-    radial-gradient(circle at 92% 16%, rgba(200, 117, 78, 0.18), transparent 24rem);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(220, 239, 235, 0.64)),
+    linear-gradient(225deg, rgba(217, 164, 65, 0.16), rgba(255, 255, 255, 0) 48%);
   box-shadow: var(--shadow);
 }
 
@@ -269,10 +273,10 @@ h3 {
   gap: clamp(22px, 4vw, 42px);
   align-items: center;
   margin: 0 0 28px;
-  border: 1px solid rgba(47, 91, 72, 0.14);
+  border: 1px solid rgba(31, 111, 101, 0.14);
   border-radius: 34px;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .research-spotlight__image {
@@ -281,7 +285,7 @@ h3 {
   aspect-ratio: 1;
   margin: 0;
   border-radius: 26px;
-  box-shadow: 0 20px 52px rgba(47, 91, 72, 0.14);
+  box-shadow: 0 20px 52px rgba(22, 68, 63, 0.13);
 }
 
 .research-spotlight h3 {
@@ -312,7 +316,7 @@ h3 {
   left: 18px;
   width: 2px;
   content: "";
-  background: linear-gradient(var(--sage), transparent);
+  background: linear-gradient(var(--aqua), transparent);
 }
 
 .timeline__item {
@@ -327,10 +331,10 @@ h3 {
   left: 12px;
   width: 14px;
   height: 14px;
-  border: 5px solid #f7efe1;
+  border: 5px solid var(--mist);
   border-radius: 50%;
   content: "";
-  background: var(--sage-deep);
+  background: var(--primary);
 }
 
 .timeline__item span,
@@ -339,7 +343,7 @@ h3 {
 .project__label {
   display: inline-block;
   margin-bottom: 10px;
-  color: var(--clay);
+  color: var(--coral);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -369,11 +373,12 @@ h3 {
   align-items: center;
   border-radius: 28px;
   padding: 24px 26px;
-  box-shadow: 0 18px 48px rgba(47, 91, 72, 0.11);
+  box-shadow: 0 18px 48px rgba(22, 68, 63, 0.1);
 }
 
 .project--lead {
-  background: var(--panel-strong);
+  background:
+    linear-gradient(135deg, #ffffff 0%, rgba(220, 239, 235, 0.48) 100%);
 }
 
 .project p {
@@ -393,7 +398,7 @@ h3 {
   grid-template-columns: 0.32fr 1fr;
   gap: 24px;
   align-items: center;
-  background: linear-gradient(135deg, #ffffff 0%, #f7ead7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-soft) 100%);
 }
 
 .publication h3 {
