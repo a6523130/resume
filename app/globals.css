@@ -198,7 +198,6 @@ h3 {
 .hero__card {
   border-radius: 34px;
   padding: 30px;
-  transform: rotate(-1.5deg);
 }
 
 .hero__card strong {
