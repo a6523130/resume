@@ -24,10 +24,14 @@ vendor/
 # Build and cache outputs
 dist/
 build/
+.next/
+out/
 .cache/
 .parcel-cache/
 .vite/
 coverage/
+next-env.d.ts
+*.tsbuildinfo
 
 # Environment and local configuration
 .env
