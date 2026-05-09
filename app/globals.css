@@ -49,6 +49,17 @@ a {
   text-decoration: none;
 }
 
+
+.trial-banner {
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+  color: #ffffff;
+  background: var(--sage-deep);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+}
+
 .hero {
   min-height: 88vh;
   padding: 28px clamp(20px, 5vw, 72px) 72px;
