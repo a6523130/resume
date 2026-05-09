@@ -107,6 +107,7 @@ const publications = [
 export default function Home() {
   return (
     <>
+      <p className="trial-banner">试用版</p>
       <header className="hero">
         <nav className="topbar" aria-label="页面导航">
           {navItems.map((item) => (
