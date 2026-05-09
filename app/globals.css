@@ -59,7 +59,7 @@ a {
   padding: 10px 20px;
   text-align: center;
   color: #ffffff;
-  background: var(--sage-deep);
+  background: var(--primary-deep);
   font-size: 14px;
   letter-spacing: 0.16em;
 }
