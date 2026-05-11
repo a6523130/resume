@@ -1,0 +1,6 @@
+.git/
+node_modules/
+.next/
+.next_stale_backup_20260511_1125/
+*.log
+.env.local

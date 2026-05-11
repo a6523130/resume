@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { AppointmentForm } from "./components/appointment-form";
 
 const navItems = [
   { href: "#profile", label: "简介" },
   { href: "#experience", label: "经历" },
   { href: "#projects", label: "项目" },
   { href: "#publications", label: "成果" },
+  { href: "#appointment", label: "预约" },
 ];
 
 const tags = ["氧化应激", "神经损伤", "细胞自噬", "铁死亡", "lncRNA", "心肌肥厚"];
@@ -251,6 +253,36 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="section section--warm" id="appointment">
+          <div className="appointment-shell">
+            <div className="appointment-copy">
+              <p className="eyebrow">Appointment</p>
+              <h2>预约交流</h2>
+              <p>
+                如需学术合作、课题沟通或公开分享邀请，可在这里留下您的联系信息与期望时间。表单会通过后端写入
+                Supabase 的预约表，不会直接暴露数据库访问给浏览器。
+              </p>
+
+              <div className="appointment-notes">
+                <article>
+                  <span>01</span>
+                  <h3>服务端入库</h3>
+                  <p>浏览器只提交到本站接口，真正写库发生在后端 Session Pool 连接中。</p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <h3>信息可扩展</h3>
+                  <p>数据库除了标准列，还会保留原始表单 JSON，方便后续扩充字段。</p>
+                </article>
+              </div>
+            </div>
+
+            <div className="appointment-panel">
+              <AppointmentForm />
+            </div>
           </div>
         </section>
       </main>

@@ -25,6 +25,7 @@ vendor/
 dist/
 build/
 .next/
+.next_stale_backup_*/
 out/
 .cache/
 .parcel-cache/
@@ -40,3 +41,6 @@ next-env.d.ts
 
 # Local-only documents not referenced by the site
 高强 简历 2026 v3.pdf
+
+# Local Netlify folder
+.netlify
